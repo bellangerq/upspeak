@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ global.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>{{ global.title }}</title>
+  </head>
+  <body>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </body>
+</html>

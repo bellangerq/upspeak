@@ -1,0 +1,11 @@
+{% extends 'layouts/slides.njk' %}
+
+{% block slides %}
+  {% for slide in collections.slides %}
+    <section id="{{ slide.fileSlug }}Slide" class="slide slide-{{ slide.data.theme if slide.data.theme else global.defaultTheme }}">
+      <div class="slide-content flow">
+        {{ slide.templateContent | safe }}
+      </div>
+    </section>
+  {% endfor %}
+{% endblock %}

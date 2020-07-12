@@ -1,0 +1,50 @@
+.slide {
+	min-height: 100vh;
+	padding: 2rem;
+	scroll-snap-align: center;
+}
+
+.slide-intro {
+	display: flex;
+	flex-direction: column;
+}
+
+.slide-meta {
+	margin-top: auto;
+}
+
+.slide-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+.slide-meta {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.slide-date {
+	margin-left: 2rem;
+}
+
+.slide h2 {
+	margin: 4rem 0;
+}
+
+.slide-light {
+	background: #fff;
+	color: #222;
+}
+
+.slide-dark {
+	background: #222;
+	color: #fff;
+}
+
+.slide-sepia {
+	background: #f5e6c8;
+	color: #222;
+}

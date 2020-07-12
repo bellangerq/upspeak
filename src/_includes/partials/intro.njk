@@ -1,0 +1,18 @@
+<header class="slide slide-intro">
+  <div class="slide-content">
+    <h1>{{ global.title }}</h1>
+    <p>{{ global.description }}</p>
+    <div class="slide-meta">
+      <div class="slide-speaker">
+        <span role="img" aria-label="Speaker">🎤</span>
+        {{ global.author }}
+      </div>
+      <div class="slide-date">
+        {% if global.date %}
+          <span role="img" aria-label="Conference date">📅</span>
+          <time>{{ global.date }}</time>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>

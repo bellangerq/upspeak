@@ -1,0 +1,13 @@
+@import './reset.css';
+@import './typography.css';
+@import './utility.css';
+@import './intro.css';
+@import './slide.css';
+
+html {
+	scroll-snap-type: y mandatory;
+}
+
+*:focus {
+	outline: 3px solid;
+}
