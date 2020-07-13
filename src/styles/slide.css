@@ -1,7 +1,14 @@
 .slide {
 	min-height: 100vh;
 	padding: 2rem;
+	position: relative;
 	scroll-snap-align: center;
+}
+
+.slide-number {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
 }
 
 .slide-intro {

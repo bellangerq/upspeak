@@ -5,5 +5,6 @@ module.exports = {
 	date: '06/07/2021',
 	author: 'Quentin Bellanger',
 	language: 'fr',
-	defaultTheme: 'light'
+	defaultTheme: 'light',
+	showSlideNumber: true
 }

@@ -2,10 +2,17 @@
 
 {% block slides %}
   {% for slide in collections.slides %}
-    <section id="{{ slide.fileSlug }}Slide" class="slide slide-{{ slide.data.theme if slide.data.theme else global.defaultTheme }}">
+    <section class="slide slide-{{ slide.data.theme or global.defaultTheme }}">
       <div class="slide-content flow">
         {{ slide.templateContent | safe }}
       </div>
+
+      {% if global.showSlideNumber %}
+        <div class="slide-number">
+          <span class="visually-hidden">Slide n°</span>
+          {{ slide.data.order }}
+        </div>
+      {% endif %}
     </section>
   {% endfor %}
 {% endblock %}
