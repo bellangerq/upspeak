@@ -24,7 +24,7 @@ module.exports = function (config) {
 
 		if (slidesWithoutOrder.length) {
 			slidesWithoutOrder.forEach(s => {
-				console.log(`❌ Slide ${s.fileSlug} has no order`)
+				console.log(`⚠️ Slide ${s.fileSlug} has no order`)
 			})
 			return unorderedSlides
 		}
@@ -34,7 +34,7 @@ module.exports = function (config) {
 		const uniqueOrders = [...new Set(orders)]
 
 		if (orders.length != uniqueOrders.length) {
-			console.log(`❌ Some slides have a duplicate order!`)
+			console.log(`⚠️ Some slides have a duplicate order!`)
 			return unorderedSlides
 		}
 

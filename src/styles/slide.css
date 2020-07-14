@@ -2,7 +2,7 @@
 	min-height: 100vh;
 	padding: 2rem;
 	position: relative;
-	scroll-snap-align: center;
+	scroll-snap-align: start;
 }
 
 .slide-number {
