@@ -4,8 +4,11 @@
 @import './intro.css';
 @import './slide.css';
 
-html {
-  scroll-snap-type: y mandatory;
+/* To insure proper support on every browser, we have to set the scroll-snap-type property on both html and body elements
+https://css-tricks.com/practical-css-scroll-snapping/#example-3-vertical-full-screen */
+html,
+body {
+	scroll-snap-type: y mandatory;
 }
 
 *:focus {

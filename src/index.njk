@@ -2,7 +2,7 @@
 
 {% block slides %}
   {% for slide in collections.slides %}
-    <section class="slide slide-{{ slide.data.theme or global.defaultTheme }}">
+    <section data-slide-index="{{ loop.index }}" class="slide slide-{{ slide.data.theme or global.defaultTheme }}">
       <div class="slide-content flow">
         {{ slide.templateContent | safe }}
       </div>
@@ -15,4 +15,5 @@
       {% endif %}
     </section>
   {% endfor %}
+  <script src="scripts/slides.js"></script>
 {% endblock %}
