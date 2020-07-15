@@ -1,0 +1,3 @@
+- Presentation perso
+- Presentation du concept de pâtes
+- Faire une petite blague (graisser la pâte)

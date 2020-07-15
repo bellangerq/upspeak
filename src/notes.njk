@@ -3,13 +3,22 @@
 {% block content %}
 <h1>Notes</h1>
 
-Le contenu!
+<p>Current slide : <span id="current-slide"></span></p>
 
-<p>
-  slide en cours : <span id="current-slide">inconnue</span>
-</p>
-
-<button id="control-next">Next</button>
+{% for slide in collections.slides %}
+  <section class="note" data-note-slug="{{slide | noteSlug}}">
+    <h2>{{ slide.fileSlug }}</h2>
+    <button
+      class="goto-button" 
+      data-note-slug="{{slide | noteSlug}}"
+    >
+      Go to slide
+    </button>
+    {% if slide.notes %}
+      {{ slide.notes.templateContent | safe }}
+    {% endif %}
+  </section>
+{% endfor %}
 
 <script src="/scripts/notes.js"></script>
 {% endblock %}

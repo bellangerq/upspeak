@@ -1,14 +1,14 @@
-@import './reset.css';
-@import './typography.css';
-@import './utility.css';
-@import './intro.css';
-@import './slide.css';
+@import "./reset.css";
+@import "./typography.css";
+@import "./utility.css";
+@import "./slide.css";
+@import "./note.css";
 
 /* To insure proper support on every browser, we have to set the scroll-snap-type property on both html and body elements
 https://css-tricks.com/practical-css-scroll-snapping/#example-3-vertical-full-screen */
 html,
 body {
-	scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 *:focus {
