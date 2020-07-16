@@ -3,14 +3,12 @@
 {% block content %}
 <h1>Notes</h1>
 
-<p>Current slide : <span id="current-slide"></span></p>
-
 {% for slide in collections.slides %}
-  <section class="note" data-note-slug="{{slide | noteSlug}}">
+  <section class="note" data-note-slug="{{ slide.fileSlug }}">
     <h2>{{ slide.fileSlug }}</h2>
     <button
       class="goto-button" 
-      data-note-slug="{{slide | noteSlug}}"
+      data-note-slug="{{ slide.fileSlug }}"
     >
       Go to slide
     </button>
