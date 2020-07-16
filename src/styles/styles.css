@@ -5,9 +5,9 @@
 @import './slide.css';
 
 html {
-	scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 *:focus {
-	outline: 3px solid;
+  outline: 3px solid;
 }
