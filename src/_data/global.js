@@ -6,5 +6,6 @@ module.exports = {
   author: 'Quentin Bellanger',
   language: 'fr',
   defaultTheme: 'light',
-  showSlideNumber: true
+  showSlideNumber: true,
+  notes: true
 }

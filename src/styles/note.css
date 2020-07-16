@@ -1,0 +1,8 @@
+.note {
+  margin-bottom: 2rem;
+  border: 2px solid transparent;
+}
+
+.note-current {
+  border-color: black;
+}

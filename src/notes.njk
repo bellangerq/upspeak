@@ -1,0 +1,22 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<h1>Notes</h1>
+
+{% for slide in collections.slides %}
+  <section class="note" data-note-slug="{{ slide.fileSlug }}">
+    <h2>{{ slide.fileSlug }}</h2>
+    <button
+      class="goto-button" 
+      data-note-slug="{{ slide.fileSlug }}"
+    >
+      Go to slide
+    </button>
+    {% if slide.notes %}
+      {{ slide.notes.templateContent | safe }}
+    {% endif %}
+  </section>
+{% endfor %}
+
+<script src="/scripts/notes.js"></script>
+{% endblock %}
