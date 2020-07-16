@@ -1,5 +1,5 @@
 ---
-theme: "dark"
+theme: 'dark'
 order: 2
 ---
 

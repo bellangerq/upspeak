@@ -7,7 +7,7 @@ const gotoButtons = document.querySelectorAll('.goto-button')
  */
 function updateSlideIndex(slug) {
   // remove the note-current class
-  noteSections.forEach((el) => {
+  noteSections.forEach(el => {
     el.classList.remove('note-current')
   })
 
@@ -23,17 +23,17 @@ function updateSlideIndex(slug) {
 updateSlideIndex('_intro_')
 
 // listen to slide change from the main window
-window.opener.addEventListener('slidescroll', (e) => {
+window.opener.addEventListener('slidescroll', e => {
   updateSlideIndex(e.detail)
 })
 
 // add controller buttons click handlers
-gotoButtons.forEach((el) => {
+gotoButtons.forEach(el => {
   const targetSlug = el.dataset.noteSlug
   el.addEventListener('click', () => {
     window.dispatchEvent(
       new CustomEvent('gotoslide', {
-        detail: targetSlug,
+        detail: targetSlug
       })
     )
   })

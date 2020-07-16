@@ -5,34 +5,34 @@
  */
 function linkSlidesWithNotes(slides, notes) {
   const notesBySlug = {}
-  notes.forEach((note) => {
+  notes.forEach(note => {
     const slug = note.fileSlug.split('.')[0]
     notesBySlug[slug] = note
   })
 
-  slides.forEach((slide) => {
+  slides.forEach(slide => {
     slide.notes = notesBySlug[slide.fileSlug]
   })
 }
 
 module.exports = function (config) {
-  config.addCollection('slides', (collection) => {
+  config.addCollection('slides', collection => {
     const unorderedSlides = collection.getFilteredByGlob(
       './src/slides/!(*.notes.md)'
     )
 
     // If some slides don't have the `order` key.
-    const slidesWithoutOrder = unorderedSlides.filter((s) => !s.data.order)
+    const slidesWithoutOrder = unorderedSlides.filter(s => !s.data.order)
 
     if (slidesWithoutOrder.length) {
-      slidesWithoutOrder.forEach((s) => {
+      slidesWithoutOrder.forEach(s => {
         console.log(`⚠️ Slide "${s.fileSlug}" has no order`)
       })
       return unorderedSlides
     }
 
     // If some slides have the same `order` key
-    const orders = unorderedSlides.map((s) => s.data.order)
+    const orders = unorderedSlides.map(s => s.data.order)
     const uniqueOrders = [...new Set(orders)]
 
     if (orders.length != uniqueOrders.length) {
@@ -54,14 +54,14 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/scripts')
 
   config.setBrowserSyncConfig({
-    notify: true,
+    notify: true
   })
 
   return {
     passthroughFileCopy: true,
     dir: {
       input: 'src',
-      output: 'dist',
-    },
+      output: 'dist'
+    }
   }
 }
