@@ -55,3 +55,21 @@
   background: #f5e6c8;
   color: #222;
 }
+
+.slide-notes {
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.slide-notes button {
+  opacity: 0;
+  transition: opacity 2s linear;
+}
+
+.slide-notes:hover button,
+.slide-notes button:focus {
+  transition-duration: 0.25s;
+  opacity: 1;
+}

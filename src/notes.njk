@@ -5,13 +5,15 @@
 
 {% for slide in collections.slides %}
   <section class="note" data-note-slug="{{ slide.fileSlug }}">
-    <h2>{{ slide.fileSlug }}</h2>
-    <button
-      class="goto-button" 
-      data-note-slug="{{ slide.fileSlug }}"
-    >
-      Go to slide
-    </button>
+    <header class="note-header vertical-flow">
+      <h2>{{ slide.fileSlug }}</h2>
+      <button
+        class="goto-button" 
+        data-note-slug="{{ slide.fileSlug }}"
+      >
+        Go to slide
+      </button>
+    </header>
     {% if slide.notes %}
       {{ slide.notes.templateContent | safe }}
     {% endif %}
