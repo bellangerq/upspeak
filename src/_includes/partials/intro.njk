@@ -1,21 +1,24 @@
-<header data-slide-slug="_intro_" class="slide slide-intro">
+<header data-slide-slug="_intro_" class="Intro">
   <div class="slide-content">
-    <h1>{{ global.title }}</h1>
-    <p>{{ global.description }}</p>
-    <div class="slide-meta">
-      <div class="slide-speaker">
-        <span role="img" aria-label="Speaker">🎤</span>
-        {{ global.author }}
+    <h1 class="Intro__Title">{{ global.title }}</h1>
+    <p class="Intro__Description">{{ global.description }}</p>
+    <div class="Intro__Footer">
+      <div class="Intro__Meta">
+        <div class="Intro__Speaker">
+          <span role="img" aria-label="Speaker">🎤</span>
+          {{ global.author }}
+        </div>
+
+        {% if global.date %}
+          <div>
+            <span role="img" aria-label="Conference date">📅</span>
+            <time>{{ global.date }}</time>
+          </div>
+        {% endif %}
       </div>
-      {% if global.date %}
-      <div class="slide-date">
-          <span role="img" aria-label="Conference date">📅</span>
-          <time>{{ global.date }}</time>
-      </div>
-      {% endif %}
       {% if global.notes %}
-        <div class="slide-notes">
-          <button id="openNotes">Open notes</button>
+        <div class="Intro__Notes">
+          <button class="button" id="openNotes">📝 Open notes</button>
         </div>
       {% endif %}
     </div>
