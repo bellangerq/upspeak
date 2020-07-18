@@ -1,5 +1,5 @@
 .flow > * + * {
-  margin-top: 2rem;
+  margin-top: var(--spacing-l, var(--flow-spacing));
 }
 
 .visually-hidden {

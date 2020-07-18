@@ -1,0 +1,37 @@
+:root {
+  --color-black: #222;
+  --color-white: #fff;
+  --font-family-base: Merriweather, Georgia, serif;
+  --font-family-heading: 'Noto Sans', sans-serif;
+
+  --font-size-m: 1.5rem;
+  --font-size-l: 2.25rem;
+  --font-size-xl: 2.75rem;
+  --font-size-xxl: 4rem;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --radius-m: 3px;
+
+  --spacing-xs: 0.25rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 2rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 8rem;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --font-size-m: 1rem;
+    --font-size-l: 1.75rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.5rem;
+
+    --spacing-m: 0.5rem;
+    --spacing-l: 1rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 4rem;
+  }
+}
