@@ -6,12 +6,13 @@
 {% for slide in collections.slides %}
   <section class="note" data-note-slug="{{ slide.fileSlug }}">
     <h2>{{ slide.fileSlug }}</h2>
-    <button
+    {# <button
       class="goto-button" 
       data-note-slug="{{ slide.fileSlug }}"
     >
       Go to slide
-    </button>
+    </button> #}
+    <us-goto-button slide-slug="{{ slide.fileSlug }}"></us-goto-button>
     {% if slide.notes %}
       {{ slide.notes.templateContent | safe }}
     {% endif %}

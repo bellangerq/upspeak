@@ -1,5 +1,27 @@
+/** Renders a button emitting a `gotoslide` event when clicked. */
+class GotoButton extends HTMLElement {
+  connectedCallback() {
+    this.render()
+
+    this.firstChild.addEventListener('click', () => {
+      const slug = this.getAttribute('slide-slug')
+      this.dispatchEvent(
+        new CustomEvent('gotoslide', {
+          detail: slug,
+          bubbles: true
+        })
+      )
+    })
+  }
+
+  render() {
+    this.innerHTML = `<button type="button" class="goto-button">Go to slide</button>`
+  }
+}
+
+window.customElements.define('us-goto-button', GotoButton)
+
 const noteSections = document.querySelectorAll('section[data-note-slug]')
-const gotoButtons = document.querySelectorAll('.goto-button')
 
 /**
  * Change the currently highlighter note section.
@@ -25,16 +47,4 @@ updateSlideIndex('_intro_')
 // listen to slide change from the main window
 window.opener.addEventListener('slidescroll', e => {
   updateSlideIndex(e.detail)
-})
-
-// add controller buttons click handlers
-gotoButtons.forEach(el => {
-  const targetSlug = el.dataset.noteSlug
-  el.addEventListener('click', () => {
-    window.dispatchEvent(
-      new CustomEvent('gotoslide', {
-        detail: targetSlug
-      })
-    )
-  })
 })
