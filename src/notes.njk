@@ -18,5 +18,7 @@
   </section>
 {% endfor %}
 
-<script src="/scripts/notes.js"></script>
+{% if global.notes %}
+  <script src="/scripts/notes.js"></script>
+{% endif %}
 {% endblock %}
