@@ -1,3 +1,5 @@
+const globalData = require('./src/_data/global.js')
+const hasNotes = globalData.notes
 /**
  * Add a notes property to the slide templates objects.
  * @param {object[]} slides
@@ -51,7 +53,9 @@ module.exports = function (config) {
   })
 
   config.addPassthroughCopy('src/styles')
-  config.addPassthroughCopy('src/scripts')
+  if (hasNotes) {
+    config.addPassthroughCopy('src/scripts')
+  }
 
   config.setBrowserSyncConfig({
     notify: true
@@ -60,7 +64,7 @@ module.exports = function (config) {
   return {
     passthroughFileCopy: true,
     dir: {
-      input: 'src',
+      input: hasNotes ? 'src/{index.njk,notes.njk}' : 'src/!(notes.njk)',
       output: 'dist'
     }
   }
