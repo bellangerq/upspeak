@@ -1,6 +1,12 @@
 @import './reset.css';
+@import './variables.css';
 @import './typography.css';
 @import './utility.css';
+
+@import './components/button.css';
+
+@import './partials/intro.css';
+
 @import './slide.css';
 @import './note.css';
 
@@ -12,5 +18,6 @@ body {
 }
 
 *:focus {
-  outline: 3px solid;
+  outline: 3px solid var(--color-black);
+  outline-offset: 2px;
 }

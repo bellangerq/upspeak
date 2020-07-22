@@ -1,0 +1,28 @@
+.Intro {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--spacing-l);
+  scroll-snap-align: start;
+}
+
+.Intro__Title {
+  margin-bottom: var(--spacing-xl);
+}
+
+.Intro__Description {
+  font-size: var(--font-size-l);
+  margin-bottom: var(--spacing-xl);
+}
+
+.Intro__Footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.Intro__Speaker {
+  margin-right: var(--spacing-m);
+}

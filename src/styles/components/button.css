@@ -1,0 +1,11 @@
+.button {
+  background: var(--color-black);
+  border: 0;
+  color: var(--color-white);
+  border-radius: var(--radius-m);
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.button:active {
+  transform: translateY(2px);
+}
