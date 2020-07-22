@@ -2,7 +2,7 @@ const noteSections = document.querySelectorAll('section[data-note-slug]')
 const gotoButtons = document.querySelectorAll('.goto-button')
 
 /**
- * Change the currently highlighter note section.
+ * Change the currently highlighted note section.
  * @param {string} slug The current slide fileslug
  */
 function updateSlideIndex(slug) {
