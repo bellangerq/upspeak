@@ -64,9 +64,7 @@ module.exports = function (config) {
   return {
     passthroughFileCopy: true,
     dir: {
-      input: hasNotes
-        ? 'src/{index.njk,notes.njk,slides/!(*.notes).md}'
-        : 'src/{notes.njk,slides/!(*.notes).md}',
+      input: 'src',
       output: 'dist'
     }
   }
