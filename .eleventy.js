@@ -1,5 +1,5 @@
-const globalData = require('./src/_data/global.js')
-const hasNotes = globalData.notes
+const htmlmin = require('html-minifier')
+
 /**
  * Add a notes property to the slide templates objects.
  * @param {object[]} slides
@@ -52,13 +52,23 @@ module.exports = function (config) {
     return orderedSlides
   })
 
-  config.addPassthroughCopy('src/styles')
-  if (hasNotes) {
-    config.addPassthroughCopy('src/scripts')
-  }
-
   config.setBrowserSyncConfig({
     notify: true
+  })
+
+  // optimize output html
+  config.addTransform('htmlmin', function (content) {
+    if (process.env.NODE_ENV !== 'production') {
+      return content
+    }
+    return htmlmin.minify(content, {
+      useShortDoctype: true,
+      removeComments: true,
+      collapseWhitespace: true,
+      html5: true,
+      sortAttributes: true,
+      sortClassName: true
+    })
   })
 
   return {
