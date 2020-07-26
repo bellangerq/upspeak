@@ -4,6 +4,7 @@ module.exports = {
     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt illo corrupti itaque atque soluta consectetur, delectus expedita mollitia omnis facilis eum asperiores quod ea pariatur. Inventore quaerat esse blanditiis ullam!',
   date: '06/07/2021',
   author: 'Quentin Bellanger',
+  url: 'https://slides-generator.netlify.app',
   language: 'fr',
   defaultTheme: 'light',
   showSlideNumber: true,
