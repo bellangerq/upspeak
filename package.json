@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "eleventy --serve",
-    "build": "eleventy",
+    "serve": "npx eleventy --serve | gulp watch",
+    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production gulp build",
     "format": "prettier --write ."
   },
   "keywords": [],
@@ -13,6 +13,16 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "html-minifier": "^4.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "2.0.5"

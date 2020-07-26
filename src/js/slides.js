@@ -1,6 +1,6 @@
 document.getElementById('openNotes').addEventListener('click', () => {
   window._currentSlide = 0
-  const noteWindow = window.open('/notes')
+  const noteWindow = window.open('./notes')
 
   noteWindow.addEventListener('slidecontrol', () => {
     console.log('Event emitted by note window')
