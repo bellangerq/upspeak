@@ -12,7 +12,7 @@
   "author": "Quentin Bellanger",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^1.0.2",
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "cross-env": "^7.0.2",
